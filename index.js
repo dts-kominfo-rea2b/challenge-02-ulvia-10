@@ -16,26 +16,48 @@ const arrayObjectPegawai = require("./data-customer.json");
 function lakukanLooping(arrPegawai) {
   // ! JANGAN DIMODIFIKASI
   let dataYangAkanDilooping = arrPegawai;
-
   /*
     TODO 1: Buatlah sebuah variabel bernama "hasilLooping" 
       yang berisi gabungan nama depan dan belakang dari masing masing pegawai
 
       Contoh: ["Aisyah Nirmala", "Mansur Faisal", ...]
+
   */
-  let hasilLooping = null;
+  // let hasilLooping = () => {
+  //   dataYangAkanDilooping.map((item)=>{
+  //     `${item.namaDepan} ${item.namaBelakang}`
+  //   })
+  //   return hasilLooping;
+  // };
+
+  let hasilLooping = []
+  for (i=0; i<dataYangAkanDilooping.length; i++){
+    let fullName = dataYangAkanDilooping[i].namaDepan + dataYangAkanDilooping[i].namaBelakang
+    hasilLooping[i] = fullName;
+    hasilLooping[i]
+  }
+
 
   /*
     TODO 2: Buatlah sebuah variabel bernama "jumlahPria"
       yang berisi jumlah pria dari masing masing pegawai
   */
-  let jumlahPria = null;
-
+  let jumlahPria = 0
+  for(i=0; i<dataYangAkanDilooping.length; i++){
+   if(dataYangAkanDilooping.jenisKelamin = 'M'){
+     jumlahPria = jumlahPria + 1
+   }
+  }
   /*
     TODO 3: Buatlah sebuah variabel bernama "jumlahWanita"
       yang berisi jumlah wanita dari masing masing pegawai
   */
-  let jumlahWanita = null;
+  let jumlahWanita = 0;
+  for(i=0; i<dataYangAkanDilooping.length; i++){
+    if(dataYangAkanDilooping.jenisKelamin = "F"){
+      jumlahWanita = jumlahWanita+1
+    }
+  }
 
   /*
     TODO 4: Buatlah sebuah variabel bernama "komentar"
@@ -48,7 +70,17 @@ function lakukanLooping(arrPegawai) {
       Apabila imbang, maka komentar akan berisi:
         "Jumlah Pria dan Wanita berimbang"
   */
-  let komentar = null;
+  let komentar = "";
+  if(jumlahPria> jumlahWanita){
+    komentar = "Jumlah Pria lebih banyak dari Wanita"
+  }else if(jumlahWanita > jumlahPria){
+    komentar="Jumlah Wanita lebih banyak dari Pria"
+  }else{
+    komentar="Jumlah Pria dan Wanita berimbang"
+  }
+
+
+  
 
   // ! JANGAN DIMODIFIKASI
   return {
