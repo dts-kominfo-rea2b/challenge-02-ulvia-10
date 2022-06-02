@@ -32,7 +32,7 @@ function lakukanLooping(arrPegawai) {
 
   let hasilLooping = []
   for (i=0; i<dataYangAkanDilooping.length; i++){
-    let fullName = dataYangAkanDilooping[i].namaDepan + dataYangAkanDilooping[i].namaBelakang
+    let fullName = dataYangAkanDilooping[i].namaDepan +' '+ dataYangAkanDilooping[i].namaBelakang
     hasilLooping[i] = fullName;
     hasilLooping[i]
   }
